@@ -99,3 +99,34 @@ mainDot.addEventListener('click', (event)=>{
         }
     })
 })
+
+// 신상 필터링
+const newBtnContainer=document.querySelector('.new__categories');
+const productContainer=document.querySelector('.new__right');
+const product=document.querySelectorAll('.new');
+
+newBtnContainer.addEventListener('click', (event)=>{
+    const filter=event.target.dataset.filter||event.target.parentNode.dataset.filter;
+
+    if(filter===null){
+        return;
+    }
+
+    // 버튼 선택
+    const active=document.querySelector('.category__btn.selected');
+    active.classList.remove('selected');
+    const target=event.target.nodeName==='BUTTON'? event.target : event.target.parentNode;
+    target.classList.add('selected');
+
+    // 필터링
+    product.forEach((product)=>{
+        if(filter===product.dataset.type){
+            product.classList.remove('invisible');
+        }else if(filter==='*' || filter===product.dataset.type){
+            product.classList.remove('invisible');
+        }
+        else{
+            product.classList.add('invisible');
+        }
+    });
+})

@@ -401,6 +401,10 @@ button{
     position: relative;
 }
 
+.new.invisible{
+    display: none;
+}
+
 .new__description{
     position: absolute;
     display: flex;
