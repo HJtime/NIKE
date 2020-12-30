@@ -72,6 +72,10 @@ button{
     padding: var(--spacing-micro);
 }
 
+.topbar.invisible{
+    display: none;
+}
+
 .topbar__menu{
     display: flex;
 }
@@ -91,6 +95,11 @@ button{
     height: 60px;
     position: relative;
     transition: all 100ms ease-in-out;
+    border-bottom: 1px solid var(--color-light-grey);
+}
+
+.navbar.visible{
+    top: 0;
 }
 
 .navbar .inner .menu{
