@@ -122,7 +122,7 @@ button{
     width: 100%;
     height: auto;
     left: 0;
-    top: 45px;
+    top: 47px;
     background-color: var(--color-white);
     transition: all 200ms linear;
 }
@@ -162,6 +162,15 @@ button{
 }
 
 .navbar__toggle-btn{
+    position: absolute;
+    right: 32px;
+    top: 22px;
+    font-size: 24px;
+    display: none;
+    color: var(--color-black);
+}
+
+.navbar__close-btn{
     position: absolute;
     right: 32px;
     top: 22px;
@@ -539,8 +548,77 @@ button{
         --spacing-reguler: 85px;
         --spacing-large: 100px;
     }
-    
+
     .navbar .inner{
+        position: fixed;
+        width: 80%;
+        height: 100%;
+        right: 0;
+        background-color: var(--color-white);
+        display: none;
+    }
+    
+    .navbar .inner .menu{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;
+        padding-top: var(--spacing-reguler);
+        padding-left: var(--spacing-medium);
+    }
+
+    .navbar .inner .menu li{
+        padding-bottom: var(--spacing-small);
+    }
+    
+    .navbar .inner .menu img{
+        display: none;
+    }
+    
+    .navbar .inner .menu li:hover .sub__menu{
+        visibility: visible;
+    }
+    
+    .navbar .inner .menu a{
+        font-size: var(--font-medium);
+    }
+    
+    /***************/
+    .sub__menu{
+        position: relative;
+        width: 100%;
+        height: auto;
+        left: 0;
+        top: 0;
+        background-color: var(--color-white);
+        transition: none;
+    }
+
+    .sub__menu .link{
+        padding-top: var(--spacing-medium);
+        padding-left: var(--spacing-medium);
+    }
+
+    .sub__menu .link ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: left;
+    }
+
+    .sub__menu .link ul .sub{
+        font-size: var(--font-small);
+    }
+
+    .link__sub{
+        display: flex;
+        flex-direction: column;
+        padding-top: var(--spacing-small);
+    }
+
+    .link__sub li{
         display: none;
     }
 
@@ -554,6 +632,11 @@ button{
         top: 20px;
         width: 60px;
         display: block;
+    }
+
+    .navbar__close-btn{
+        position: absolute;
+        display: none;
     }
 
     /******* main *******/
