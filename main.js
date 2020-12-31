@@ -130,3 +130,20 @@ newBtnContainer.addEventListener('click', (event)=>{
         }
     });
 })
+
+// mobile navbar
+const navbarToggle=document.querySelector('.navbar__toggle-btn');
+const navbarClose=document.querySelector('.navbar__close-btn');
+const navbarMenu=document.querySelector('#mainInner');
+
+navbarToggle.addEventListener('click', ()=>{
+    navbarMenu.classList.add("active");
+    navbarToggle.classList.add("invisible");
+    navbarClose.classList.add("visible");
+})
+
+navbarClose.addEventListener('click', ()=>{
+    navbarMenu.classList.remove("active");
+    navbarToggle.classList.remove("invisible");
+    navbarClose.classList.remove("visible");
+})

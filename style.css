@@ -567,8 +567,13 @@ button{
         width: 80%;
         height: 100%;
         right: 0;
+        transform: translateX(100%);
+        transition: transform 400ms ease-out;
         background-color: var(--color-white);
-        display: none;
+    }
+
+    .navbar .inner.active{
+        transform: translateX(0);
     }
     
     .navbar .inner .menu{
@@ -609,6 +614,16 @@ button{
         transition: none;
     }
 
+    .sub__inner{
+        position: relative;
+        width: 80%;
+        height: auto;
+        right: 0;
+        transform: translateX(100%);
+        transition: all 300ms ease-out;
+        background-color: var(--color-white);
+    }
+
     .sub__menu .link{
         padding-top: var(--spacing-medium);
         padding-left: var(--spacing-medium);
@@ -639,6 +654,10 @@ button{
         position: absolute;
         display: block;
     }
+
+    .navbar__toggle-btn.invisible{
+        visibility: hidden;
+    }
     
     .navbar__logo{
         position: absolute;
@@ -650,6 +669,10 @@ button{
     .navbar__close-btn{
         position: absolute;
         display: none;
+    }
+    
+    .navbar__close-btn.visible{
+        display: block;
     }
 
     /******* main *******/
