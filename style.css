@@ -241,7 +241,7 @@ button{
 }
 
 .dotContainer{
-    width: 30rem;
+    width: 100%;
     display: flex;
     justify-content: center;
     margin: auto;
@@ -560,6 +560,14 @@ button{
         --spacing-medium: 40px;
         --spacing-reguler: 85px;
         --spacing-large: 100px;
+    }
+
+    .header{
+        width: 100vw;
+    }
+
+    .topbar{
+        display: none;
     }
 
     .navbar .inner{
